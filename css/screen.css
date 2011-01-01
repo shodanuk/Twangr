@@ -1,0 +1,475 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol, ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Helvetica, Arial, Verdana;
+  font-size: medium;
+  padding: 3%;
+}
+
+/* Typography */
+
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('/fonts/BebasNeue-webfont.eot');
+  src: local('☺'), url('/fonts/BebasNeue-webfont.woff') format('woff'), url('/fonts/BebasNeue-webfont.ttf') format('truetype'), url('/fonts/BebasNeue-webfont.svg#webfontf0WP9KEe') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url('/fonts/League_Gothic-webfont.eot');
+  src: local('☺'), url('/fonts/League_Gothic-webfont.woff') format('woff'), url('/fonts/League_Gothic-webfont.ttf') format('truetype'), url('/fonts/League_Gothic-webfont.svg#webfontOTINA1xY') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font: 180% 'LeagueGothicRegular', Helvetica, Arial, Verdana;
+  margin-bottom: 0;
+  text-shadow: 0 0 5px #888;
+}
+
+h2 {
+  font: 120% 'BebasNeueRegular', Helvetica, Arial, Verdana;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+a:link, a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* END Typography */
+
+/* Layout */
+
+#container {
+  display: none;
+  width: 100%;
+}
+
+.js #container {
+  display: block;
+}
+
+header {
+  display: block;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #E7E7E7;
+  display: block;
+  padding: 20px;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  -moz-box-shadow: 0 0 5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+}
+
+/* END Layout */
+
+/* @group header */
+
+#title {
+  float: left;
+}
+
+#user-dets {
+  font: 140% 'LeagueGothicRegular', Helvetica, Arial, Verdana;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+
+/* @end header */
+
+/* @group footer */
+
+footer p {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+
+/* @end footer */
+
+/* Status Update */
+
+#update {
+  background-color: #E7E7E7;
+  display: block;
+  margin-bottom: 20px;
+  padding: 1%;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  -moz-box-shadow: 0 0 5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+}
+
+#update-form label {
+  display: block;
+  font-size: 100%;
+  padding-bottom: 5px;
+}
+
+#update-form .input {
+  margin-bottom: 5px;
+}
+
+#status-update {
+  border: 1px solid #999;
+  font-family: Helvetica, Arial, Verdana;
+  font-size: 120%;
+  height: 42px;
+  padding: 1%;
+  width: 98%;
+
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+
+  -moz-box-shadow: inset 0px 0px 10px #ccc;
+  -webkit-box-shadow: inset 0px 0px 10px #ccc;
+  box-shadow: inset 0px 0px 10px #ccc;
+}
+
+#submit {
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: pointer;
+  float: right;
+  margin: 3px; /* ensures rooms for the blur */
+  padding: 4px 20px;
+
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+
+  -moz-text-shadow: -1px -1px 1px #ccc;
+  -webkit-text-shadow: -1px -1px 1px #ccc;
+  text-shadow: -1px -1px 1px #ccc;
+}
+
+#submit,
+#submit.ui-state-hover {
+  -moz-box-shadow: 0 0 2px #ccc;
+  -webkit-box-shadow: 0 0 2px #ccc;
+  box-shadow: 0 0 2px #ccc;
+}
+
+#submit.ui-state-hover {
+  /* the blur doesn't look so great in Opera. Any ideas? */
+  -moz-box-shadow: 0 0 2px red;
+  -webkit-box-shadow: 0 0 2px red;
+  box-shadow: 0 0 2px red; /* Opera 10.6 instead uses the native property but not very well */
+}
+
+#submit,
+#submit.ui-state-active {
+  background: #ffffff; /* old browsers */
+}
+
+
+#submit.ui-state-disabled {
+  color: #ccc;
+  cursor: default;
+
+  -moz-text-shadow: none;
+  -o-text-shadow: -1px -1px 1px #000;
+  text-shadow: none;
+}
+
+.feedback {
+  background-repeat: no-repeat;
+  background-position: 8% 50%;
+  border-width: 1px;
+  border-style: solid;
+  color: #55554b;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  padding: 1%;
+  width: 98%;
+}
+
+.good {
+  background-image: url(/images/fb-good-bg.png);
+  border-color: #68d59b;
+  background-color: #a3e6bd;
+}
+
+.error {
+  background-image: url(/images/fb-error-bg.png);
+  border-color: #efb9c3;
+  background-color: #ffc6ca;
+}
+
+.info {
+  background-image: url(/images/fb-info-bg.png);
+  border-color: #5fceea;
+  background-color: #9fddea;
+}
+
+.warning {
+  background-image: url(/images/fb-warning-bg.png);
+  border-color: #ffcb4f;
+  background-color: #f9e497;
+}
+
+/* END Status Update */
+
+/* Tweets */
+
+#update-timeline {
+  background: #efefef;
+  border-color: #cccccc;
+  display: block;
+  font-size: 120%;
+  margin-bottom: 10px;
+  padding: 2% 0;
+  text-align: center;
+  width: 100%;
+
+  -moz-box-shadow: 0 0 5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.tweets {
+  list-style: none;
+}
+
+.tweets li {
+  background: #efefef;
+  border-color: #cccccc;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 2% 0;
+
+  -moz-box-shadow: 0 0 5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*@-webkit-keyframes fadein {
+  0% {
+    border-color: #ffffff;
+    background-color: #ffffff;
+  }
+  100% {
+    border-color: #cccccc;
+    background-color: #efefef;
+  }
+}
+
+.tweets li:hover {
+  background: #efefef;
+  border-color: #cccccc;
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease;
+}*/
+
+.tweets header {
+  float: left;
+  padding: 0 3%;
+  text-align: center;
+}
+
+.tweets .avatar {
+  border: 2px solid #999;
+
+  -moz-box-shadow: 0 0 5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+}
+
+.tweets .avatar:hover,
+.tweets .avatar:active {
+  border: 2px solid red;
+}
+
+.tweets .avatar img {
+  display: block;
+}
+
+.tweets .screen-name {
+  font-size: 1.2em;
+}
+
+.tweets article {
+  display: block;
+  font-size: medium;
+  line-height: 1.4;
+  overflow: hidden;
+  padding: 0 3% 0 0;
+}
+
+.tweets article .user .details {
+  display: none;
+}
+
+.tweets footer {
+  background: none;
+  border: none;
+  clear: both;
+  display: block;
+  font-size: 80%;
+  margin-top: 8px;
+  padding: 0;
+  text-align: right;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.tweets time {
+}
+
+/* @group tooltip */
+
+.tooltip {
+  background-color: #fff;
+  font-size: 1.2em;
+  left: 0;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  width: auto;
+
+  background: #ffffff; /* old browsers */
+
+  -moz-box-shadow: 0 0 5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.tooltip h1 {
+  color: red;
+  font-size: 1.8em;
+}
+
+#hiddenTooltip {
+  height: auto;
+  left: 0;
+  position: absolute;
+  top:0;
+  width: auto;
+
+}
+
+/* @end tooltip */
+
+/* END Tweets */
+
+/* No JS */
+
+#no-js-message {
+  margin: 100px auto;
+  width: 100%;
+}
+
+#no-js-message h1 {
+  margin-bottom: 20px;
+}
+
+#no-js-message p {
+  font-size: 1.4em;
+}
+
+/* END No JS */
+
+/* Utility styles */
+
+.replacement {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+}
+
+/* END Utility styles */
