@@ -443,6 +443,23 @@ footer p {
 
 /* END Tweets */
 
+/* No JS */
+
+#no-js-message {
+  margin: 100px auto;
+  width: 100%;
+}
+
+#no-js-message h1 {
+  margin-bottom: 20px;
+}
+
+#no-js-message p {
+  font-size: 1.4em;
+}
+
+/* END No JS */
+
 /* Utility styles */
 
 .replacement {

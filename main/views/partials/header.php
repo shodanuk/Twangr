@@ -5,9 +5,6 @@
   <meta content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" name="viewport" />
   <title><?php echo $pageTitle; ?></title>
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" charset="utf-8" />
-  <script type="text/javascript" charset="utf-8">
-    document.write('<style type="text/css">#no-js-message { display: none; }</style>');
-  </script>
 </head>
 <body class="<?php echo $bodyClass; ?>">
   <div id="container">

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" name="viewport" />
+  <title>Your timeline - Twangr</title>
+  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+<body class="home">
+  <div id="container">
+    <header>
+      <h1>Twangr</h1>
+
+      <!-- <nav id="primary-nav">
+        <ul>
+          <li><a href="/home/logout">Logout</a></li>
+        </ul>
+      </nav> -->
+
+      <?php //if($isLoggedIn):?>
+      <div id="user-dets">Logged in as <a href=""><?php //echo $userName; ?></a>.</div>
+      <?php //endif; ?>
+    </header>
+
+    <section id="update">
+      <form action="/twitter/updateStatus" id="update-form">
+        <fieldset>
+          <div class="input text">
+            <label for="status-update">Got something on your mind? Out with it then!</label>
+            <textarea name="statusUpdate" id="status-update"></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" name="submit" id="submit" value="Tweet it!" />
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="timeline">
+      <a href="#" id="update-timeline">Update now</a>
+      <ol class="tweets"></ol>
+    </section>
+
+    <footer>
+      <p>&copy; <a href="mailto:terry.morgan76@gmail.com" rel="author">Terry Morgan</a> 2010.
+      <br/>All rights reserved. And all that jazz.
+    </footer>
+  </div>
+
+  <script charset="utf-8" src="/js/prototype.js"></script>
+  <script charset="utf-8" src="/js/s2.js"></script>
+  <script charset="utf-8" src="/js/tooltip.js"></script>
+  <script charset="utf-8" src="/js/mustache.js"></script>
+  <script charset="utf-8" src="/js/site.js"></script>
+</body>
+</html>

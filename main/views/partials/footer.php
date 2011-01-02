@@ -4,17 +4,16 @@
     </footer>
   </div>
 
-  <div id='no-js-message'>
-    <h1>Whoa there!!</h1>
-    <p>You don't appear to have Javascript enabled!</p>
-    <p>No Javascript means no Twangr and that makes me sad.</p>
-    <p>Go on, be nice and turn it back on.</p>
-  </div>
-
-  <script type="text/javascript" charset="utf-8" src="/js/prototype.js"></script>
-  <script type="text/javascript" charset="utf-8" src="/js/s2.js"></script>
-  <script type="text/javascript" charset="utf-8" src="/js/tooltip.js"></script>
-  <script type="text/javascript" charset="utf-8" src="/js/mustache.js"></script>
-  <script type="text/javascript" charset="utf-8" src="/js/site.js"></script>
+  <script charset="utf-8" src="/js/lib/prototype.js"></script>
+  <script charset="utf-8" src="/js/lib/s2.js"></script>
+  <script charset="utf-8" src="/js/lib/tooltip.js"></script>
+  <script charset="utf-8" src="/js/lib/mustache.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.util.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.tweet.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.feedbackmessage.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.updateform.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.timeline.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.user.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.application.js"></script>
 </body>
 </html>

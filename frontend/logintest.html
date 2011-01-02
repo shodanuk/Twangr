@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" name="viewport" />
+  <title>Please log in to Twitter - twangr</title>
+  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+<body class="home">
+  <div id="container">
+    <header>
+      <h1>Twangr</h1>
+    </header>
+
+    <p>First, <a id="get-pin">click here to generate a Twitter security code</a>.</p>
+
+    <p>Then enter the code below and click continue.</p>
+
+    <section>
+      <form>
+        <label for="oauth_verifier">Auth code:</label>
+        <input type="text" name="oauth_verifier" value="" id="oauth-verifier" />
+        <input type="submit" value="Continue &rarr;" />
+      </form>
+    </section>
+  </div>
+
+  <script charset="utf-8" src="/js/lib/prototype.js"></script>
+  <script charset="utf-8" src="/js/twangr/twangr.user.js"></script>
+  <script charset="utf-8">
+
+  (function() {
+    var form,
+        oauth_token,
+        oauth_token_secret,
+        user;
+
+    function setup() {
+      form = $$('section form').first();
+      user = new Twangr.User();
+
+      $('get-pin').observe('click', onClick);
+      form.observe('submit', onSubmit);
+    }
+
+    function onClick(e) {
+      e.stop();
+      user.getPin();
+    }
+
+    function onSubmit(e) {
+      e.stop();
+      var oauth_verifier = $(form['oauth_verifier']);
+
+      if($F(oauth_verifier)){
+        oauth_verifier.setStyle({
+          borderColor: 'green'
+        });
+
+        user.doOAuth($F(oauth_verifier));
+      } else {
+        oauth_verifier.setStyle({
+          borderColor: 'red'
+        });
+      }
+    }
+    document.observe('dom:loaded', setup);
+  }());
+
+  </script>
+</body>
+</html>
